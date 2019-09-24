@@ -1,0 +1,23 @@
+body {
+    background-image: url("../images/Question-Mark-Background-01.jpg");
+    color: #d7ffeb;
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+    color: yellow;
+}
+
+#timer {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+#quiz {
+    font-size: 24px;
+}
+
+#submit {
+    color: black;
+}
