@@ -63,7 +63,18 @@ function timeConverter(t) {
     }
 }
 
+// couldn't figure out how to make this part less redundant :\
+
 $("#submit").click(checkAnswer1);
+$("#submit").click(checkAnswer2);
+$("#submit").click(checkAnswer3);
+$("#submit").click(checkAnswer4);
+$("#submit").click(checkAnswer5);
+$("#submit").click(checkAnswer6);
+$("#submit").click(checkAnswer7);
+$("#submit").click(checkAnswer8);
+$("#submit").click(checkAnswer9);
+$("#submit").click(checkAnswer10);
 $("#submit").click(function() {
     timerSeconds = 0;
     $("#timer").html("Time's Up!!!");
@@ -93,7 +104,224 @@ function checkAnswer1() {
         incorrect++;
     }
 
-    // $("#results").html(`Correct Answers: ${correct}<br>
-    //     Incorrect Answers: ${incorrect}<br>
-    //     Unanswered Questions: ${unanswered}`);
+}
+
+function checkAnswer2() {
+    var radios = document.getElementsByName('Q2');
+    var chosen;
+
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+
+            chosen = radios[i].value;
+
+            // only one radio can be logically checked, don't check the rest
+            break;
+        }
+    }
+
+    if (chosen == undefined) {
+        unanswered++;
+    } else if (chosen == answers.Q2) {
+        correct++;
+    } else {
+        incorrect++;
+    }
+
+}
+
+function checkAnswer3() {
+    var radios = document.getElementsByName('Q3');
+    var chosen;
+
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+
+            chosen = radios[i].value;
+
+            // only one radio can be logically checked, don't check the rest
+            break;
+        }
+    }
+
+    if (chosen == undefined) {
+        unanswered++;
+    } else if (chosen == answers.Q3) {
+        correct++;
+    } else {
+        incorrect++;
+    }
+
+}
+
+function checkAnswer4() {
+    var radios = document.getElementsByName('Q4');
+    var chosen;
+
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+
+            chosen = radios[i].value;
+
+            // only one radio can be logically checked, don't check the rest
+            break;
+        }
+    }
+
+    if (chosen == undefined) {
+        unanswered++;
+    } else if (chosen == answers.Q4) {
+        correct++;
+    } else {
+        incorrect++;
+    }
+
+}
+
+function checkAnswer5() {
+    var radios = document.getElementsByName('Q5');
+    var chosen;
+
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+
+            chosen = radios[i].value;
+
+            // only one radio can be logically checked, don't check the rest
+            break;
+        }
+    }
+
+    if (chosen == undefined) {
+        unanswered++;
+    } else if (chosen == answers.Q5) {
+        correct++;
+    } else {
+        incorrect++;
+    }
+
+}
+
+function checkAnswer6() {
+    var radios = document.getElementsByName('Q6');
+    var chosen;
+
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+
+            chosen = radios[i].value;
+
+            // only one radio can be logically checked, don't check the rest
+            break;
+        }
+    }
+
+    if (chosen == undefined) {
+        unanswered++;
+    } else if (chosen == answers.Q6) {
+        correct++;
+    } else {
+        incorrect++;
+    }
+
+}
+
+function checkAnswer7() {
+    var radios = document.getElementsByName('Q7');
+    var chosen;
+
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+
+            chosen = radios[i].value;
+
+            // only one radio can be logically checked, don't check the rest
+            break;
+        }
+    }
+
+    if (chosen == undefined) {
+        unanswered++;
+    } else if (chosen == answers.Q7) {
+        correct++;
+    } else {
+        incorrect++;
+    }
+
+}
+
+function checkAnswer8() {
+    var radios = document.getElementsByName('Q8');
+    var chosen;
+
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+
+            chosen = radios[i].value;
+
+            // only one radio can be logically checked, don't check the rest
+            break;
+        }
+    }
+
+    if (chosen == undefined) {
+        unanswered++;
+    } else if (chosen == answers.Q8) {
+        correct++;
+    } else {
+        incorrect++;
+    }
+
+}
+
+function checkAnswer9() {
+    var radios = document.getElementsByName('Q9');
+    var chosen;
+
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+
+            chosen = radios[i].value;
+
+            // only one radio can be logically checked, don't check the rest
+            break;
+        }
+    }
+
+    if (chosen == undefined) {
+        unanswered++;
+    } else if (chosen == answers.Q9) {
+        correct++;
+    } else {
+        incorrect++;
+    }
+
+}
+
+function checkAnswer10() {
+    var radios = document.getElementsByName('Q10');
+    var chosen;
+
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+
+            chosen = radios[i].value;
+
+            // only one radio can be logically checked, don't check the rest
+            break;
+        }
+    }
+
+    if (chosen == undefined) {
+        unanswered++;
+    } else if (chosen == answers.Q10) {
+        correct++;
+    } else {
+        incorrect++;
+    }
+
+        $("#results").html(`Correct Answers: ${correct}<br>
+        Incorrect Answers: ${incorrect}<br>
+        Unanswered Questions: ${unanswered}`);
+
 }
