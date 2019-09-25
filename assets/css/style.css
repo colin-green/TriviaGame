@@ -7,11 +7,13 @@ body {
 h1 {
     font-weight: bold;
     color: yellow;
+    margin-bottom: 50px;
 }
 
 #timer {
     font-weight: bold;
     font-size: 26px;
+    margin-bottom: 50px;
 }
 
 #quiz {
@@ -20,4 +22,9 @@ h1 {
 
 #submit {
     color: black;
+}
+
+#results {
+    font-weight: bold;
+    font-size: 36px;
 }

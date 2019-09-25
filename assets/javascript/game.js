@@ -2,21 +2,22 @@ var intervalID;
 var correct = 0;
 var incorrect = 0;
 var unanswered = 0;
+var score;
 
 var answers = {
-    Q1: "A",
+    Q1: "C",
     Q2: "D",
     Q3: "B",
-    Q4: "B",
+    Q4: "D",
     Q5: "A",
     Q6: "A",
     Q7: "D",
     Q8: "B",
     Q9: "C",
-    Q10: "A"
+    Q10: "C"
 }
 
-var timerSeconds = 180;
+var timerSeconds = 240;
 
 $("#timer").text(timeConverter(timerSeconds));
 
@@ -75,6 +76,7 @@ $("#submit").click(checkAnswer7);
 $("#submit").click(checkAnswer8);
 $("#submit").click(checkAnswer9);
 $("#submit").click(checkAnswer10);
+$("#submit").click(checkBonus);
 $("#submit").click(function() {
     timerSeconds = 0;
     $("#timer").html("Time's Up!!!");
@@ -320,8 +322,31 @@ function checkAnswer10() {
         incorrect++;
     }
 
+}
+
+function checkBonus() {
+    var radios = document.getElementsByName('bonus');
+    var chosen;
+
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+
+            chosen = radios[i].value;
+
+            // only one radio can be logically checked, don't check the rest
+            break;
+        }
+    }
+
+    if (chosen == answers.Q10) {
+        correct++;
+    }
+
+    score = correct * 10;
+
         $("#results").html(`Correct Answers: ${correct}<br>
         Incorrect Answers: ${incorrect}<br>
-        Unanswered Questions: ${unanswered}`);
+        Unanswered Questions: ${unanswered}<br>
+        Final Score: ${score}%`);
 
 }
