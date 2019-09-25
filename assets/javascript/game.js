@@ -14,7 +14,8 @@ var answers = {
     Q7: "D",
     Q8: "B",
     Q9: "C",
-    Q10: "C"
+    Q10: "C",
+    bonus: "B"
 }
 
 var timerSeconds = 240;
@@ -338,7 +339,7 @@ function checkBonus() {
         }
     }
 
-    if (chosen == answers.Q10) {
+    if (chosen == answers.bonus) {
         correct++;
     }
 
